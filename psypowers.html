@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TableTopToolbox - Psychic Powers</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <table>
+            <tr>
+                <td>
+                    <select id='psyPowSelect'>
+                        <option selected disabled>Choose option...</option>
+                        <option value="biomancy" id="biomancyOption">Biomancy</option>
+                        <option value="divination" id="divinationOption">Divination</option>
+                        <option value="sanctic daemonology" id="sancticOption">Sanctic Daemonology</option>
+                        <option value="malefic daemonology" id="maleficOption">Malefic Daemonology</option>
+                        <option value="pyromancy" id="pyromancyOption">Pyromancy</option>
+                        <option value="telekinesis" id="telekinesisOption">Telekinesis</option>
+                        <option value="telepathy" id="telepathyOption">Telepathy</option>
+                    </select>
+                </td>
+                <td>
+                     <input id="masteryLevel" name="mastery_level" type="number" max="3">Mastery Level</input>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="psyGen">Generate</button>
+                </td>
+            </tr>
+        </table>
+    </div>      
+
+    <div class="container-fluid">
+        <div id="spellTable">
+        </div>
+    </div>
+
+    <script src="assets/js/psypowers.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

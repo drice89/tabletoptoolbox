@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TableTopToolbox - Wound Probability</title>
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class = "container-fluid">
+            <p>On the below table enter the numerical value for the dice needed to hit, wound, save, or have a bonus save.
+                For example, if you hit on a 3+, wound on a 5+, and the target saves on a 5+ you would enter "3" under "Hit",
+                "5" under "Wound", and "3" under "Save".
+            </p>
+        </div>
+        <div class="container" id="toHitTable">
+            <div class="row">
+                <div class="col-md-2"><label>Target</label><br>
+                    <input id="target" type="text" />
+                </div>
+                <div class="col-md-1">
+                    <label>Shots</label>
+                    <br>
+                    <input id="shots" type="number" size="4" min="1" max="999" />
+                </div>
+                <div class="col-md-1"> 
+                    <label>Hit</label>
+                    <br>
+                    <input id="chanceToHit" type="number" size="4" min="2" max="6" />
+                </div>
+                <div class="col-md-1"> 
+                    <label>Wound</label>
+                    <br>
+                    <input id="chanceToWound" type="number" size="4" min="2" max="6" />
+                </div>
+                <div class="col-md-1"> 
+                    <label>Save</label>
+                    <br>
+                    <input id="chanceToSave" type="number" size="4" min="2" max="6" />
+                </div>
+                <div class="col-md-2"> 
+                    <label>FNP or RP</label>
+                    <br>
+                    <input id="bonusChanceToSave" type="number" size="4" min="2" max="6" />
+                </div>
+                <div class="col-md-1"> 
+                    <label> Wound Probability</label>
+                    <br>
+                    <span id="modifiedToWound"></span>
+                </div>
+            </div>
+            <div class ="row">
+                <div class ="col-md-8">
+                    <button id="btnSubmit">Submit</button>
+                    <span id="error-message"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class = "table-responsive">
+            <table class="table table-striped" id="submittedData">
+                <tr class="table-header">
+                    <th>Target</th>
+                    <th>Shots</th>
+                    <th>Hit</th>
+                    <th>Wound</th>
+                    <th>Save</th>
+                    <th>FNP/RP</th>
+                    <th>Wound Probability</th>
+                </tr>
+                <tr id="footer">
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+    <script src="assets/js/hit_calc.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+</BODY>
+
+</HTML>
